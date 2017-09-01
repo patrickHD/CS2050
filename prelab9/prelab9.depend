@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1428265864 source:z:\spring2015\cs2050\prelab9\main.c
+	<stdio.h>
+	<stdlib.h>
+

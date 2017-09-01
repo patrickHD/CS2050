@@ -1,0 +1,102 @@
+/*
+    Name: Patrick Daniel
+    Pawprint: phd6x2
+    Date: 3/18/2015
+    Lab section: G
+    Sub code: Linked List
+    CS2050 Lab7
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node_
+{
+    int val;
+    struct node_ *next;
+}node;
+
+node* insert_at_head(node* head, int val);
+node* create_list(char* file);
+void print_list(node* head);
+node* delete_even(node* head);
+
+
+int main(int argc, char* argv[])
+{
+    if (argc < 2)
+    {
+        printf("Incorrect number of command line arguments\n");
+    }
+    node *head=NULL;
+    head=malloc(sizeof(node));
+    head=create_list(argv[1]);
+    print_list(head);
+    head=delete_even(head);
+    print_list(head);
+
+    return 0;
+}
+
+node* insert_at_head(node* head, int val)
+{
+	node *nodeN=(node*)malloc(sizeof(node));
+	nodeN->val=val;
+	nodeN->next=head;
+	return nodeN;
+}
+
+node* create_list(char* file)
+{
+    node *list=NULL;
+    FILE* inputF=fopen(file, "r");
+    int val;
+    while(!feof(inputF))
+    {
+        fscanf(inputF, "%d", &val);
+        list=insert_at_head(list, val);
+    }
+    return list;
+}
+
+void print_list(node *head)
+{
+    node *current=head;
+    while(current!=NULL)
+    {
+        printf("%d\n", current->val);
+        current=current->next;
+    }
+}
+
+node* delete_even(node* head)
+{
+    /*
+    node *cursor=head;
+    while(cursor!=NULL)
+    {
+        if(cursor->val%2!=0)
+        {
+
+        }
+        cursor=cursor->next;
+    }
+    */
+    node* next;
+    if (head == NULL)
+	{
+        printf("not found\n");
+        return NULL;
+    }
+	else if (head->val%2!=0)
+	{
+        next = head->next;
+        free(head);
+        return next;
+    }
+	else
+	{
+        head->next=delete_even(head->next);
+        return head;
+    }
+}

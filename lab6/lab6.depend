@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1426106740 source:z:\spring2015\cs2050\lab6\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+	<sys/time.h>
+

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1430345699 source:z:\spring2015\cs2050\lab11\parser.c
+	"parser.h"
+
+1430347746 source:z:\spring2015\cs2050\lab11\frontend.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"parser.h"
+
+1430339731 z:\spring2015\cs2050\lab11\parser.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"parser.h"
+

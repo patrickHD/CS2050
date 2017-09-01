@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1429729686 source:z:\spring2015\cs2050\lab10\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1429737711 source:z:\spring2015\cs2050\lab10\bst.c
+	"bst.h"
+
+1429735621 z:\spring2015\cs2050\lab10\bst.h
+	"stdio.h"
+	"stdlib.h"
+
+1429737723 source:z:\spring2015\cs2050\lab10\lab10.c
+	<stdio.h>
+	<stdlib.h>
+	"bst.h"
+
